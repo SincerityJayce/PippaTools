@@ -1,0 +1,21 @@
+.clickarrow{
+    height: 30px;
+}
+.leftArrow{
+    transform: rotate(180deg);
+}
+
+#Review-Files .workspace{
+    border: none;
+    background:none;
+    display: flex;
+    place-content: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#Review-Files .workspace .canvasdiv{
+    background: #111111b8;
+    min-height: 60vh;
+    overflow: hidden;
+}

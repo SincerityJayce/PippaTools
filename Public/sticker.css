@@ -1,0 +1,26 @@
+#StickerZone{
+    background: none;
+    display: flex;
+    flex:0;
+    min-width: none;
+    max-height: 90%;
+    border: none;
+}
+
+#StickerZone div{
+    background: #111111b8;
+    margin: 18px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding:20px;
+    border-radius: 5px;
+    border: 3px solid rgba(255, 255, 255, 0.531);
+    width:fit-content;
+    height: fit-content;
+}
+
+#StickerZone div img{
+    max-width: 30vh;
+    max-height:30vh;
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pippa's Tools</title>
+
+    <link rel="stylesheet" href="Original.css">
+    <link rel="stylesheet" href="my.css">
+    <link rel="stylesheet" href="sticker.css">
+    <link rel="stylesheet" href="review.css">
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.9.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.9.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.9.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/8.9.1/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/8.9.1/firebase-functions.js"></script>
+    <script defer src="/__/firebase/8.9.1/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/8.9.1/firebase-storage.js"></script>
+    <script defer src="/__/firebase/8.9.1/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/8.9.1/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/8.9.1/firebase-performance.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+
+  </head>
+  <body>
+    <div id='menu-container'>
+      <img class="zelda-logo" src="https://fontmeme.com/permalink/210816/773f26a1b685b3ad6ec44a93677ad90d.png" height='31px'style="--aspect-ratio:200/31;">
+
+      <a id='Sticker Maker' taskName='Sticker Maker' class="decorated-button">
+          <div class="button-text">Sticker Maker</div>
+          <div class="left-decoration"></div>
+          <div class="right-decoration"></div>
+      </a>
+
+      <a id='PDF Stamper' taskName='PDF Stamper'class="decorated-button">
+        <div class="button-text">PDF Stamper</div>
+        <div class="left-decoration"></div>
+        <div class="right-decoration"></div>
+      </a>
+
+      <a id='Review Files' taskName='Review Files' class="decorated-button">
+        <div class="button-text">Review Files</div>
+        <div class="left-decoration"></div>
+        <div class="right-decoration"></div>
+      </a>
+    </div>
+
+
+
+
+
+
+    <!-- Sticker Tab -->
+    <div id='Sticker-Creator' class='tool-container' style ='display:none;'>
+      <div id='StickerZone' class="workspace" >
+
+        <div>
+          <div><a>Size</a>
+            <input id="Sticker-Size" type="range" min="1" max="200" value="100" class="slider" >
+            </div>
+
+            <div id='stickerPreview' class='drop-zone'>
+              <span class="drop-zone__prompt"><a>Upload Sticker <br></br>
+              </span>
+              <input id='StickerDrop' type="file" name="myFile" class="drop-zone__input" style='display: none;'>
+            </div>
+
+        </div>
+
+        <div class='canvasdiv'>Size Preview
+          <canvas id="pdf-preview-canvas" width="400"></canvas>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Stamping Tab -->
+    <div id='PDF-Stamper' class='tool-container'  style ='display:none;'>
+      <div class="drop-zone workspace" >
+        <a>Drop files here or click to upload</a>
+        <span class="drop-zone__prompt"></span>
+        <input id='PDFDrop' type="file" name="myFile" class="drop-zone__input" style='display: none;'>
+      </div>
+    </div>
+
+    <!-- Review Tab -->
+    <div id='Review-Files' class='tool-container' style ='display:none;'>
+      <div class="workspace" > 
+        <img onclick='clickLeft()' src='clickarrow.png' class='clickarrow leftArrow'>
+        <div style='max-width: 400px;'>
+          <a id='pdf-review-nametag' ></a>
+          <br></br>
+          <div class='canvasdiv'>
+            <canvas id="pdf-review-canvas" width="400"></canvas>
+          </div>
+        </div>       
+        <img onclick='clickRight()' src='clickarrow.png' class='clickarrow'>
+      </div>
+    </div>
+
+  </body> 
+
+
+  <!-- pdf analysis container : hidden-->
+  <div id="pdf-main-container">
+    <div id="pdf-contents">
+      <div id="pdf-meta">
+      </div>
+      <canvas id="pdf-test-canvas" width="400"></canvas>
+    </div>
+  </div>
+
+
+
+  <!-- scripts -->
+  <!-- display pdf as image -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.2.228/pdf.min.js"></script>
+  <!-- edit and download pdf -->
+  <script src="https://unpkg.com/pdf-lib@1.4.0"></script>
+  <script src="https://unpkg.com/downloadjs@1.4.7"></script>
+
+  <!-- my scripts -->
+  <script defer src="Sticker Management.js"></script>
+  <script defer src="sticker preview.js"></script>
+  <script defer src="PDF Stamp tab.js"></script>
+  <script defer src="filedrop.js"></script>
+  <script defer src="files to review.js"></script>
+  <script defer src="pdf.js"></script>
+  <script defer src="background load.js"></script>
+  <script defer src="spacefinding.js"></script>
+  <script defer src="task Controller.js"></script>
+</html>
