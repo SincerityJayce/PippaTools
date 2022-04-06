@@ -5,16 +5,25 @@
     align-items: left;
     flex-direction: column;
     justify-content: left;
+    flex: 0 0;
+    min-width: none;
 }
 
 body{
     overflow: hidden;
+    display: flex;
 }
 
 /* Set's standard width of the task buttons */
 .button-text {
-    min-width: 40vh;
+    min-width: 276px;
 }
+
+#TheWorkspace{
+    flex-grow:1;
+    display: flex;
+}
+
 .tool-container {
     padding-top:18vh;
     display: flex;

@@ -1,8 +1,7 @@
 #StickerZone{
     background: none;
     display: flex;
-    flex:0;
-    min-width: none;
+    flex-wrap:wrap;
     max-height: 90%;
     border: none;
 }
@@ -16,11 +15,8 @@
     padding:20px;
     border-radius: 5px;
     border: 3px solid rgba(255, 255, 255, 0.531);
-    width:fit-content;
-    height: fit-content;
 }
 
 #StickerZone div img{
-    max-width: 30vh;
-    max-height:30vh;
+    object-fit: scale-down;
 }

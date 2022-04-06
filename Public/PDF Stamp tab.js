@@ -2,6 +2,7 @@ function OnPDFInput(input){
 
   reviewNameTag.innerHTML = 'Loading...'
   openFileIndex = filesToReview.length
+  document.getElementById('Review Files').style.display='inline'
   document.getElementById('Review Files').click();
 
 

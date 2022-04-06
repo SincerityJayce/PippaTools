@@ -1,5 +1,5 @@
 const taskTabs = {
-    'Sticker Maker': document.getElementById('Sticker-Creator'),
+    'Sticker Editor': document.getElementById('Sticker-Creator'),
     'PDF Stamper': document.getElementById('PDF-Stamper'),
     'Review Files': document.getElementById('Review-Files')
 }
@@ -49,7 +49,7 @@ PDFStamperTask.addEventListener('dragover', function (e){
     _SelectedTask=PDFStamperTask;
     renderTaskButtons();
 })
-const StickerTask = document.getElementById('Sticker Maker')
+const StickerTask = document.getElementById('Sticker Editor')
 StickerTask.addEventListener('dragover', function (e){
     e.preventDefault()
     _SelectedTask=StickerTask;
